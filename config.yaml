@@ -2,7 +2,7 @@
 name: "Surikat Editor Homeassistant"
 description: "Surikat editor config plugin for Homeassistant"
 version: "1.0.14"
-slug: "surikat"
+slug: "surikat-editor"
 init: false
 arch:
   - aarch64
