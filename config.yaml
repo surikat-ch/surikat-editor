@@ -19,7 +19,7 @@ options:
   mqtt_topic: "frigate/events"
   mqtt_user: "user"
   mqtt_password: "password"
-  network: "WIFI"
+  network: "wifi"
 schema:
   mqtt_host: str
   mqtt_port: int
@@ -29,8 +29,8 @@ schema:
   network:
     type: select
     options:
-      - WIFI
-      - POE
+      - wifi
+      - poe
 map:
   config:
     target: /config
