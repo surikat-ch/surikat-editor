@@ -23,7 +23,7 @@ options:
   network: "wifi"
 schema:
   mqtt_host: str
-  mqtt_port: int
+  mqtt_port: port
   mqtt_topic: str
   mqtt_user: str
   mqtt_password: str

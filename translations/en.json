@@ -1,0 +1,8 @@
+{
+  "configuration": {
+    "network": {
+      "name": "Custom Label for String",
+      "description": "This is a description for the string option."
+    }
+  }
+}
