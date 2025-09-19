@@ -1,6 +1,6 @@
 # config.yaml (add-on)
-name: "Surikat Editor Homeassistant"
-description: "Surikat editor config plugin for Homeassistant"
+name: "Surikat Homeassistant"
+description: "Surikat plugin for Homeassistant"
 version: "1.0.14"
 slug: "surikat-editor"
 init: false
@@ -13,41 +13,20 @@ arch:
 startup: services
 ports:
   8000/tcp: 8000
-
-# Options disponibles dans l'UI
 options:
-  connection_type: "POE"         # Liste déroulante POE/WIFI
-  enable_logging: true           # Booléen pour activer/désactiver le logging
-  device_name: "Surikat"         # Nom du périphérique
   mqtt_host: "mqtt://localhost"
   mqtt_port: 1883
   mqtt_topic: "frigate/events"
   mqtt_user: "user"
   mqtt_password: "password"
-
-# Définition des types et selecteurs pour l'UI
+  default_name: "password"
 schema:
-  connection_type:
-    type: str
-    description: "Choisissez le type de connexion"
-    selector:
-      select:
-        options:
-          - POE
-          - WIFI
-  enable_logging:
-    type: bool
-    description: "Activer le logging pour Surikat Editor"
-  device_name:
-    type: str
-    description: "Nom du périphérique utilisé par l'add-on"
   mqtt_host: str
   mqtt_port: int
   mqtt_topic: str
   mqtt_user: str
   mqtt_password: str
-
-# Mapping vers le système de fichiers
+  default_name: str
 map:
   config:
     target: /config
