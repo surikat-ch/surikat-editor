@@ -13,20 +13,41 @@ arch:
 startup: services
 ports:
   8000/tcp: 8000
+
+# Options disponibles dans l'UI
 options:
-  new_option: "default_value" 
+  connection_type: "POE"         # Liste déroulante POE/WIFI
+  enable_logging: true           # Booléen pour activer/désactiver le logging
+  device_name: "Surikat"         # Nom du périphérique
   mqtt_host: "mqtt://localhost"
   mqtt_port: 1883
   mqtt_topic: "frigate/events"
   mqtt_user: "user"
   mqtt_password: "password"
+
+# Définition des types et selecteurs pour l'UI
 schema:
-  new_option: str
+  connection_type:
+    type: str
+    description: "Choisissez le type de connexion"
+    selector:
+      select:
+        options:
+          - POE
+          - WIFI
+  enable_logging:
+    type: bool
+    description: "Activer le logging pour Surikat Editor"
+  device_name:
+    type: str
+    description: "Nom du périphérique utilisé par l'add-on"
   mqtt_host: str
   mqtt_port: int
   mqtt_topic: str
   mqtt_user: str
   mqtt_password: str
+
+# Mapping vers le système de fichiers
 map:
   config:
     target: /config
