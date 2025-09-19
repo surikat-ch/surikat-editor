@@ -19,24 +19,19 @@ options:
   mqtt_topic: "frigate/events"
   mqtt_user: "user"
   mqtt_password: "password"
-  network_type: "WIFI"
+  network: "WIFI"
 schema:
   mqtt_host: str
   mqtt_port: int
   mqtt_topic: str
   mqtt_user: str
   mqtt_password: str
-  network_type:
-    type: str
-    description: "Select network"
-    enum:
+  network:
+    type: select
+    options:
       - WIFI
       - POE
 map:
   config:
     target: /config
     readonly: false
-advanced:
-  steps:
-    - title: "Étape 1: Network"
-      description: "Configurez le type de connexion réseau"
