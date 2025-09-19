@@ -14,14 +14,14 @@ startup: services
 ports:
   8000/tcp: 8000
 options:
-  client: "client name"
+  new_option: "default_value" 
   mqtt_host: "mqtt://localhost"
   mqtt_port: 1883
   mqtt_topic: "frigate/events"
   mqtt_user: "user"
   mqtt_password: "password"
 schema:
-  client: str
+  new_option: str
   mqtt_host: str
   mqtt_port: int
   mqtt_topic: str
