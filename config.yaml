@@ -20,9 +20,7 @@ options:
   mqtt_user: "user"
   mqtt_password: "password"
   enable_logs: false
-  network:
-    - "wifi"
-    - "poe"
+  network: "wifi"
 schema:
   mqtt_host: str
   mqtt_port: int
@@ -30,8 +28,7 @@ schema:
   mqtt_user: str
   mqtt_password: str
   enable_logs: bool
-  network:
-    - str
+  select_option: list(wifi|poe)
 map:
   config:
     target: /config
