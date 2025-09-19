@@ -15,6 +15,7 @@ ports:
   8000/tcp: 8000
 options:
   connection_type: "POE"  # Valeur par défaut
+  client: "client name"
   mqtt_host: "mqtt://localhost"
   mqtt_port: 1883
   mqtt_topic: "frigate/events"
@@ -29,6 +30,7 @@ schema:
           options:
             - POE
             - WIFI
+  client: str
   mqtt_host: str
   mqtt_port: int
   mqtt_topic: str
