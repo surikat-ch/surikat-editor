@@ -14,20 +14,21 @@ startup: services
 ports:
   8000/tcp: 8000
 options:
-  connection_type:
-    type: str
-    description: "Choisissez le type de connexion"
-    selector:
-      select:
-        options:
-          - POE
-          - WIFI
+  connection_type: "POE"  # Valeur par défaut
   mqtt_host: "mqtt://localhost"
   mqtt_port: 1883
   mqtt_topic: "frigate/events"
   mqtt_user: "user"
   mqtt_password: "password"
 schema:
+  connection_type:
+      type: str
+      description: "Choisissez le type de connexion"
+      selector:
+        select:
+          options:
+            - POE
+            - WIFI
   mqtt_host: str
   mqtt_port: int
   mqtt_topic: str
