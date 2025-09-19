@@ -1,6 +1,6 @@
 # config.yaml (add-on)
-name: "Surikat Homeassistant"
-description: "Surikat plugin for Homeassistant"
+name: "Surikat Editor Homeassistant"
+description: "Surikat editor plugin for Homeassistant"
 version: "1.0.14"
 slug: "surikat-editor"
 init: false
@@ -31,3 +31,7 @@ map:
   config:
     target: /config
     readonly: false
+advanced:
+  steps:
+    - title: "Étape 1: Network"
+      description: "Configurez le type de connexion réseau"
