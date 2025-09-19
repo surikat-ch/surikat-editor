@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+echo "Vérification de la configuration..."
+python3 /app/options.py || exit 1
+
 echo "Listing contents of /config before write test:"
 ls -l /config || echo "Failed to list /config"
 
